@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 100; i++) {
             input.add("Test" + i);
         }// define an adapter
-        
+
         mAdapter = new ListAdapter(input);
         recyclerView.setAdapter(mAdapter);
     }
