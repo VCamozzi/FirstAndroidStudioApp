@@ -6,7 +6,7 @@ public class RestPokemonResponse {
 
     private int count;
     private String next;
-    private List<Pokemon> result;
+    private List<Pokemon> results;
 
 
     public int getCount() {
@@ -17,7 +17,7 @@ public class RestPokemonResponse {
         return next;
     }
 
-    public List<Pokemon> getResult() {
-        return result;
+    public List<Pokemon> getResults() {
+        return results;
     }
 }
