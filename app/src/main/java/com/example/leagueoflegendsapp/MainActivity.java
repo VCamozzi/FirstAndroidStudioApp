@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void showList(List<Items> ItemsList) {
+    private void showList(List<item> itemList) {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         // use this setting to
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        //mAdapter = new ListAdapter(ItemsList);
+        mAdapter = new ListAdapter(itemList);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(Call<Items> call, Response<Items> response) {
                     if(response.isSuccessful() && response.body() != null){
                         Items ItemsResponse = response.body();
-                        //showList(ItemsResponse);
+                        showList(ItemsResponse.getData());
                     }else{
                         showError();
                     }
