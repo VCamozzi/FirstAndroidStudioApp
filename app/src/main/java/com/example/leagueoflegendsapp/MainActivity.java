@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Items> call, Response<Items> response) {
                     if(response.isSuccessful() && response.body() != null){
-                        data ItemsList = response.body().getData();
-                        //showList(ItemsList);
+                        Items ItemsResponse = response.body();
+                        //showList(ItemsResponse);
                     }else{
                         showError();
                     }

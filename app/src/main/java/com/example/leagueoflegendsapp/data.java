@@ -4,19 +4,14 @@ import java.util.ArrayList;
 
 class data {
 
-    private String name;
-    private String description;
-    private String colloq;
-    private String plaintext;
-
-    private ArrayList<String> into = new ArrayList<String>();
-    private ArrayList<String> tags = new ArrayList<String>();
-
-    private image image;
-    private gold gold;
-    private maps maps;
-    private stats stats;
+private ArrayList<item> listItem = new ArrayList<item>();
 
 
+    public ArrayList<item> getListItem() {
+        return listItem;
+    }
 
+    public void setListItem(ArrayList<item> listItem) {
+        this.listItem = listItem;
+    }
 }
