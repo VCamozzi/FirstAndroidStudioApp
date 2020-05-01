@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 public interface LolApi {
 
-    @GET("/item.json")
+    @GET("/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/data/fr_FR/item.json")
     Call<Items> getLolResponse();
 }

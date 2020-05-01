@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    private static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/10.9.1/data/en_US/";
+    private static final String BASE_URL = "https://raw.githubusercontent.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Items> call, Response<Items> response) {
                     if(response.isSuccessful() && response.body() != null){
-                        List<data> ItemsList = response.body().getData();
+                        data ItemsList = response.body().getData();
                         //showList(ItemsList);
                     }else{
                         showError();

@@ -8,7 +8,7 @@ public class Items {
     private String version;
 
     //private basic basic;
-    private ArrayList<data> data = new ArrayList<data>();
+    private data data;
     private ArrayList<groups> groups = new ArrayList<groups>();
     private ArrayList<tree> tree = new ArrayList<tree>();
 
@@ -46,11 +46,12 @@ public class Items {
         this.type = type;
     }
 
-    public ArrayList<com.example.leagueoflegendsapp.data> getData() {
+
+    public com.example.leagueoflegendsapp.data getData() {
         return data;
     }
 
-    public void setData(ArrayList<com.example.leagueoflegendsapp.data> data) {
+    public void setData(com.example.leagueoflegendsapp.data data) {
         this.data = data;
     }
 }
