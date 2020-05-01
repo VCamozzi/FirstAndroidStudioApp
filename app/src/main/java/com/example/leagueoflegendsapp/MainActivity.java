@@ -10,7 +10,6 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    private static final String BASE_URL = "https://pokeapi.co";
+    private static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/10.9.1/data/fr_FR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
 
-            PokeApi pokeApi = retrofit.create(PokeApi.class);
+            LolApi lolApi = retrofit.create(LolApi.class);
 
-            Call<RestPokemonResponse> call = pokeApi.getPokemonResponse();
+            Call<Items> call = lolApi.getLolResponse();
 
-            call.enqueue(new Callback<RestPokemonResponse>() {
+            call.enqueue(new Callback<Items>() {
                 @Override
-                public void onResponse(Call<RestPokemonResponse> call, Response<RestPokemonResponse> response) {
+                public void onResponse(Call<Items> call, Response<Items> response) {
                     if(response.isSuccessful() && response.body() != null){
                         List<Pokemon> pokemonList = response.body().getResults();
                         showList(pokemonList);
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<RestPokemonResponse> call, Throwable t) {
+                public void onFailure(Call<Items> call, Throwable t) {
                     showError();
                 }
             });
