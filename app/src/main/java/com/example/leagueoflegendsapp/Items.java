@@ -7,8 +7,8 @@ public class Items {
     private String type;
     private String version;
 
-    private groups basic;
-    private tree data;
+    //private basic basic;
+    private data data;
     private ArrayList<groups> groups = new ArrayList<groups>();
     private ArrayList<tree> tree = new ArrayList<tree>();
 }

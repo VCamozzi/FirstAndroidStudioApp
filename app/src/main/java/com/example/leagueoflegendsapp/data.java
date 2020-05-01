@@ -9,8 +9,8 @@ class data {
     private String colloq;
     private String plaintext;
 
-    private ArrayList<into> into = new ArrayList<into>();
-    private ArrayList<tags> tags = new ArrayList<tags>();
+    private ArrayList<String> into = new ArrayList<String>();
+    private ArrayList<String> tags = new ArrayList<String>();
 
     private image image;
     private gold gold;
