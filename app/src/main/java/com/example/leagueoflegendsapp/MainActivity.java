@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    private static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/10.9.1/data/fr_FR";
+    private static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/10.9.1/data/en_US/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void showList(List<Pokemon> pokemonList) {
+    private void showList(List<Items> ItemsList) {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         // use this setting to
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new ListAdapter(pokemonList);
+        //mAdapter = new ListAdapter(ItemsList);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Items> call, Response<Items> response) {
                     if(response.isSuccessful() && response.body() != null){
-                        List<Pokemon> pokemonList = response.body().getResults();
-                        showList(pokemonList);
+                        List<data> ItemsList = response.body().getData();
+                        //showList(ItemsList);
                     }else{
                         showError();
                     }
