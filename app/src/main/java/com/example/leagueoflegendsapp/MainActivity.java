@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.leagueoflegendsapp.serial.Items;
+import com.example.leagueoflegendsapp.serial.item;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

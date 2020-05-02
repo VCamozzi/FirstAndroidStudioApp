@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp;
+package com.example.leagueoflegendsapp.serial;
 
 class image {
 
