@@ -60,7 +60,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
             }
         });
 
-        holder.txtFooter.setText("Footer: " + currentItem.getDescription());
+        holder.txtFooter.setText(currentItem.getPlaintext());
         //récupération de l'image avec la  librairie Picasso
         Picasso.get().load("https://raw.githubusercontent.com/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/img/item/" + currentItem.getImage().getFull()).into(holder.img);
     }
