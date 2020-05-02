@@ -1,6 +1,6 @@
 package com.example.leagueoflegendsapp.serial;
 
-class maps {
+public class maps {
 
     private boolean onze;
     private boolean douze;

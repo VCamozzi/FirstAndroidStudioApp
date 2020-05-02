@@ -1,6 +1,6 @@
 package com.example.leagueoflegendsapp.serial;
 
-class stats {
+public class stats {
 
     private float FlatHPPoolMod;
     private float rFlatHPModPerLevel;

@@ -1,6 +1,6 @@
 package com.example.leagueoflegendsapp.serial;
 
-class gold {
+public class gold {
 
     private float base;
     private boolean purchasable;

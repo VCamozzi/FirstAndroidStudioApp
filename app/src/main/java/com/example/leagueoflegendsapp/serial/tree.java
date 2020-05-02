@@ -1,5 +1,5 @@
 package com.example.leagueoflegendsapp.serial;
 
-class tree {
+public class tree {
 
 }

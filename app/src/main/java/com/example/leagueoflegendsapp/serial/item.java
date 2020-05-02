@@ -2,7 +2,7 @@ package com.example.leagueoflegendsapp.serial;
 
 import java.util.ArrayList;
 
-class item {
+public class item {
 
     private String name;
     private String description;

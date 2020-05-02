@@ -2,7 +2,7 @@ package com.example.leagueoflegendsapp.serial;
 
 import java.util.ArrayList;
 
-class data {
+public class data {
 
 private ArrayList<item> listItem = new ArrayList<item>();
 

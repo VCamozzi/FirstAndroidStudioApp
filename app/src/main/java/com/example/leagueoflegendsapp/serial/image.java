@@ -1,6 +1,6 @@
 package com.example.leagueoflegendsapp.serial;
 
-class image {
+public class image {
 
     private String full;
     private String sprite;
