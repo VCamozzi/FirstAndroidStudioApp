@@ -1,9 +1,11 @@
-package com.example.leagueoflegendsapp;
+package com.example.leagueoflegendsapp.display;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.leagueoflegendsapp.R;
 import com.example.leagueoflegendsapp.serial.item;
 import com.squareup.picasso.Picasso;
 
@@ -54,7 +56,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                //remove(position);
             }
         });
 
