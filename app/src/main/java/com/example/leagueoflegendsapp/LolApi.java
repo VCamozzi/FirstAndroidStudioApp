@@ -1,5 +1,7 @@
 package com.example.leagueoflegendsapp;
 
+import com.example.leagueoflegendsapp.serial.Items;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 
