@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.leagueoflegendsapp.serial.item;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
@@ -14,7 +16,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    
+
 
     public void add(int position, item item) {
         values.add(position, item);
@@ -57,6 +59,8 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         });
 
         holder.txtFooter.setText("Footer: " + currentItem.getDescription());
+        //récupération de l'image avec la  librairie Picasso
+        Picasso.get().load("https://raw.githubusercontent.com/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/img/item/" + currentItem.getImage().getFull()).into(holder.img);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
