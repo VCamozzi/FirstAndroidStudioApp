@@ -31,7 +31,6 @@ public class MainController {
         }else{
             makeApiCall();
         }
-
     }
 
 
@@ -81,8 +80,8 @@ public class MainController {
         }
     }
 
+
     public void onItemClick(item item){
         view.naviagteToDetails(item);
     }
-
 }

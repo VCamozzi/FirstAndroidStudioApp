@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.leagueoflegendsapp.R;
 import com.example.leagueoflegendsapp.Singletons;
 import com.example.leagueoflegendsapp.presentation.controller.MainController;
+import com.example.leagueoflegendsapp.presentation.model.Items;
 import com.example.leagueoflegendsapp.presentation.model.item;
 
 import java.util.List;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void naviagteToDetails(item item) {
         Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
-        //myIntent.putExtra("key", value); //Optional parameters
+        myIntent.putExtra("item", Singletons.getGson().toJson(item));
         MainActivity.this.startActivity(myIntent);
 
     }
