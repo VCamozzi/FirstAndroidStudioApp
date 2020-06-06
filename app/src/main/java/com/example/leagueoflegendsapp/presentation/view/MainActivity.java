@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp;
+package com.example.leagueoflegendsapp.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,9 +7,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.example.leagueoflegendsapp.display.ListAdapter;
-import com.example.leagueoflegendsapp.serial.Items;
-import com.example.leagueoflegendsapp.serial.item;
+
+import com.example.leagueoflegendsapp.Constants;
+import com.example.leagueoflegendsapp.R;
+import com.example.leagueoflegendsapp.data.LolApi;
+import com.example.leagueoflegendsapp.presentation.view.ListAdapter;
+import com.example.leagueoflegendsapp.presentation.model.Items;
+import com.example.leagueoflegendsapp.presentation.model.item;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.List;

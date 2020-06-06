@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp.serial;
+package com.example.leagueoflegendsapp.presentation.model;
 
 import java.util.ArrayList;
 
@@ -43,19 +43,19 @@ public class item {
         return tags;
     }
 
-    public com.example.leagueoflegendsapp.serial.image getImage() {
+    public com.example.leagueoflegendsapp.presentation.model.image getImage() {
         return image;
     }
 
-    public com.example.leagueoflegendsapp.serial.gold getGold() {
+    public com.example.leagueoflegendsapp.presentation.model.gold getGold() {
         return gold;
     }
 
-    public com.example.leagueoflegendsapp.serial.maps getMaps() {
+    public com.example.leagueoflegendsapp.presentation.model.maps getMaps() {
         return maps;
     }
 
-    public com.example.leagueoflegendsapp.serial.stats getStats() {
+    public com.example.leagueoflegendsapp.presentation.model.stats getStats() {
         return stats;
     }
 
@@ -87,19 +87,19 @@ public class item {
         this.tags = tags;
     }
 
-    public void setImage(com.example.leagueoflegendsapp.serial.image image) {
+    public void setImage(com.example.leagueoflegendsapp.presentation.model.image image) {
         this.image = image;
     }
 
-    public void setGold(com.example.leagueoflegendsapp.serial.gold gold) {
+    public void setGold(com.example.leagueoflegendsapp.presentation.model.gold gold) {
         this.gold = gold;
     }
 
-    public void setMaps(com.example.leagueoflegendsapp.serial.maps maps) {
+    public void setMaps(com.example.leagueoflegendsapp.presentation.model.maps maps) {
         this.maps = maps;
     }
 
-    public void setStats(com.example.leagueoflegendsapp.serial.stats stats) {
+    public void setStats(com.example.leagueoflegendsapp.presentation.model.stats stats) {
         this.stats = stats;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp.display;
+package com.example.leagueoflegendsapp.presentation.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.leagueoflegendsapp.R;
-import com.example.leagueoflegendsapp.serial.item;
+import com.example.leagueoflegendsapp.presentation.model.item;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

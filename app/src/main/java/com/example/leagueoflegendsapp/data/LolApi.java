@@ -1,6 +1,6 @@
-package com.example.leagueoflegendsapp;
+package com.example.leagueoflegendsapp.data;
 
-import com.example.leagueoflegendsapp.serial.Items;
+import com.example.leagueoflegendsapp.presentation.model.Items;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

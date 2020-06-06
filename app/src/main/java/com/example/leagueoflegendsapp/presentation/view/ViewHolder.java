@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp.display;
+package com.example.leagueoflegendsapp.presentation.view;
 
 import android.view.View;
 import android.widget.ImageView;

@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp.serial;
+package com.example.leagueoflegendsapp.presentation.model;
 
 import java.util.ArrayList;
 
