@@ -23,6 +23,7 @@ public class MainController {
         this.sharedPreferences = sharedPreferences;
     }
 
+
     public void onStart(){
         Items items = getDataFromCache();
 
@@ -31,7 +32,6 @@ public class MainController {
         }else{
             makeApiCall();
         }
-
     }
 
 
@@ -67,7 +67,6 @@ public class MainController {
                 .edit()
                 .putString(Constants.KEY_ITEMS, jsonString)
                 .apply();
-        //Toast.makeText(getApplicationContext(), "Json saved", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -81,8 +80,8 @@ public class MainController {
         }
     }
 
+
     public void onItemClick(item item){
         view.naviagteToDetails(item);
     }
-
 }
