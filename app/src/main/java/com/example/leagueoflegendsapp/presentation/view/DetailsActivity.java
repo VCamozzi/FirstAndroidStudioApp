@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.leagueoflegendsapp.R;
 import com.example.leagueoflegendsapp.Singletons;
+import com.example.leagueoflegendsapp.presentation.controller.DetailsController;
 import com.example.leagueoflegendsapp.presentation.model.item;
 import com.squareup.picasso.Picasso;
 
@@ -19,8 +19,6 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView txtGoldBuy;
     private TextView txtGoldSell;
     private ImageView img;
-    private String description;
-    private String descriptionOK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +38,14 @@ public class DetailsActivity extends AppCompatActivity {
         showDetail(item);
     }
 
+
     private void showDetail(item item){
         txtName.setText(item.getName());
         txtPlain.setText(item.getPlaintext());
-        txtDescription.setText(refractorDescription(item.getDescription()));
-        txtGoldBuy.setText("gold for buy : " + item.getGold().getTotal());
-        txtGoldSell.setText("gold for sell : " + item.getGold().getSell());
+        txtDescription.setText(DetailsController.refractorDescription(item.getDescription()));
+        txtGoldBuy.setText("Coût : " + item.getGold().getTotal() + "PO");
+        txtGoldSell.setText("Vente : " + item.getGold().getSell() + "PO");
         Picasso.get().load("https://raw.githubusercontent.com/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/img/item/" + item.getImage().getFull()).into(img);
     }
-
-    private String refractorDescription(String description){
-        String sautLigne = System.getProperty("line.separator");
-        description = description.replaceAll("\\<.*?\\>", sautLigne);
-        return description;
-        }
-    }
+}
 
