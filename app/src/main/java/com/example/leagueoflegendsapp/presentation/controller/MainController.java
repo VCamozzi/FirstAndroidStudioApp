@@ -1,21 +1,14 @@
 package com.example.leagueoflegendsapp.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.Toast;
-
 import com.example.leagueoflegendsapp.Constants;
-import com.example.leagueoflegendsapp.data.LolApi;
+import com.example.leagueoflegendsapp.Singletons;
 import com.example.leagueoflegendsapp.presentation.model.Items;
 import com.example.leagueoflegendsapp.presentation.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainController {
 
@@ -43,14 +36,7 @@ public class MainController {
 
     private void makeApiCall(){
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        LolApi lolApi = retrofit.create(LolApi.class);
-
-        Call<Items> call = lolApi.getLolResponse();
+        Call<Items> call = Singletons.getLolApi().getLolResponse();
 
         call.enqueue(new Callback<Items>() {
             @Override

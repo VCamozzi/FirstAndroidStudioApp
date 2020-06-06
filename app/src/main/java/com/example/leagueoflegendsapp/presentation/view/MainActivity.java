@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.example.leagueoflegendsapp.R;
+import com.example.leagueoflegendsapp.Singletons;
 import com.example.leagueoflegendsapp.presentation.controller.MainController;
 import com.example.leagueoflegendsapp.presentation.model.item;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.List;
 
@@ -20,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private MainController controller;
-    private Gson gson;
-    private SharedPreferences sharedPreferences;
+    private MainController controller;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(
                 this,
-                new GsonBuilder()
-                        .setLenient()
-                        .create(),
-                getSharedPreferences("application_Lol", Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getSharedPreferences(getApplicationContext())
         );
         controller.onStart();
 
