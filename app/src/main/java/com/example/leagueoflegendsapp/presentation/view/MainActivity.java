@@ -3,14 +3,14 @@ package com.example.leagueoflegendsapp.presentation.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.content.Context;
+
 import android.os.Bundle;
 import android.widget.Toast;
 import com.example.leagueoflegendsapp.R;
 import com.example.leagueoflegendsapp.Singletons;
 import com.example.leagueoflegendsapp.presentation.controller.MainController;
 import com.example.leagueoflegendsapp.presentation.model.item;
-import com.google.gson.GsonBuilder;
+
 import java.util.List;
 
 
@@ -48,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new ListAdapter(itemList);
+        mAdapter = new ListAdapter(itemList, new ListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(item item) {
+                controller.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -56,5 +61,8 @@ public class MainActivity extends AppCompatActivity {
     public void showError() {
         Toast.makeText(getApplicationContext(), "Api Error", Toast.LENGTH_SHORT).show();
     }
-    
+
+    public void naviagteToDetails(item item) {
+        Toast.makeText(getApplicationContext(), "TODO NAVIGATE", Toast.LENGTH_SHORT).show();
+    }
 }

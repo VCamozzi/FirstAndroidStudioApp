@@ -14,6 +14,12 @@ import java.util.List;
 public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private List<item> values;
+    private OnItemClickListener listener;
+
+
+    public interface OnItemClickListener {
+        void onItemClick(item item);
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -31,8 +37,9 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapter(List<item> myDataset) {
-        values = myDataset;
+    public ListAdapter(List<item> myDataset, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.listener = listener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -63,6 +70,13 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.txtFooter.setText(currentItem.getPlaintext());
         //récupération de l'image avec la  librairie Picasso
         Picasso.get().load("https://raw.githubusercontent.com/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/img/item/" + currentItem.getImage().getFull()).into(holder.img);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(currentItem);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)

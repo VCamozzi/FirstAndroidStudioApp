@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import com.example.leagueoflegendsapp.Constants;
 import com.example.leagueoflegendsapp.Singletons;
 import com.example.leagueoflegendsapp.presentation.model.Items;
+import com.example.leagueoflegendsapp.presentation.model.item;
 import com.example.leagueoflegendsapp.presentation.view.MainActivity;
 import com.google.gson.Gson;
 import retrofit2.Call;
@@ -78,6 +79,10 @@ public class MainController {
         }else{
             return gson.fromJson(jsonItems, Items.class);
         }
+    }
+
+    public void onItemClick(item item){
+        view.naviagteToDetails(item);
     }
 
 }

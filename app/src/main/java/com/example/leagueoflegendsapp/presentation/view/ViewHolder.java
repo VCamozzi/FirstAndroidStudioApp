@@ -3,10 +3,10 @@ package com.example.leagueoflegendsapp.presentation.view;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.leagueoflegendsapp.R;
+
+
 
 class ViewHolder extends RecyclerView.ViewHolder {
     // each data item is just a string in this case
