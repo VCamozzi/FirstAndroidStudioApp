@@ -1,4 +1,4 @@
-package com.example.leagueoflegendsapp.serial;
+package com.example.leagueoflegendsapp.presentation.model;
 
 import java.util.ArrayList;
 
@@ -14,19 +14,19 @@ public class Items {
 
 
 
-    public ArrayList<com.example.leagueoflegendsapp.serial.groups> getGroups() {
+    public ArrayList<com.example.leagueoflegendsapp.presentation.model.groups> getGroups() {
         return groups;
     }
 
-    public void setGroups(ArrayList<com.example.leagueoflegendsapp.serial.groups> groups) {
+    public void setGroups(ArrayList<com.example.leagueoflegendsapp.presentation.model.groups> groups) {
         this.groups = groups;
     }
 
-    public ArrayList<com.example.leagueoflegendsapp.serial.tree> getTree() {
+    public ArrayList<com.example.leagueoflegendsapp.presentation.model.tree> getTree() {
         return tree;
     }
 
-    public void setTree(ArrayList<com.example.leagueoflegendsapp.serial.tree> tree) {
+    public void setTree(ArrayList<com.example.leagueoflegendsapp.presentation.model.tree> tree) {
         this.tree = tree;
     }
 
