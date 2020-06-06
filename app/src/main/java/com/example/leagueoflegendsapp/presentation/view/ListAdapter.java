@@ -1,39 +1,32 @@
-package com.example.leagueoflegendsapp;
+package com.example.leagueoflegendsapp.presentation.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.leagueoflegendsapp.R;
+import com.example.leagueoflegendsapp.presentation.model.item;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private List<Pokemon> values;
+    private List<item> values;
+    private OnItemClickListener listener;
+
+
+    public interface OnItemClickListener {
+        void onItemClick(item item);
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        TextView txtHeader;
-        TextView txtFooter;
-        ImageView img;
-        View layout;
 
-        ViewHolder(View v) {
-            super(v);
-            layout = v;
-            txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
-            img = (ImageView) v.findViewById(R.id.icon);
-        }
-    }
 
-    public void add(int position, Pokemon item) {
+    public void add(int position, item item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -44,13 +37,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapter(List<Pokemon> myDataset) {
-        values = myDataset;
+    public ListAdapter(List<item> myDataset, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.listener = listener;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.row_layout, parent, false);
@@ -64,17 +58,25 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Pokemon currentPokemon = values.get(position);
-        holder.txtHeader.setText(currentPokemon.getName());
+        final item currentItem = values.get(position);
+        holder.txtHeader.setText(currentItem.getName());
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                //remove(position);
             }
         });
 
-        holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
-        //holder.img.setImageURI();
+        holder.txtFooter.setText(currentItem.getPlaintext());
+        //récupération de l'image avec la  librairie Picasso
+        Picasso.get().load("https://raw.githubusercontent.com/VCamozzi/LeagueOfLegendsApiRest/master/10.9.1/img/item/" + currentItem.getImage().getFull()).into(holder.img);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(currentItem);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)
