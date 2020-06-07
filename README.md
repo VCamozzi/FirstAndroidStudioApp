@@ -2,7 +2,7 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-Dans le cadre d'un projet lié au module de programmation mobile, j'ai été amené à développer une application sur android studio ayant pour principal objectif l'utilisation d'une API Rest. J'ai donc fait le choix d'utiliser l'API fournie par League of Legends afin de permettre à l'utilisateur d'afficher la liste des items du jeux sur une première vue, puis lors d'un clic sur un item, d'afficher les détails de ce dernier sur une deuxième vue.
+Dans le cadre d'un projet lié au module de programmation mobile, j'ai été amené à développer une application sur android studio ayant pour principal objectif l'utilisation d'une API Rest. J'ai donc fait le choix d'utiliser l'API fournie par League of Legends afin de permettre à l'utilisateur d'afficher la liste des items du jeu sur une première vue, puis lors d'un clic sur un item, d'afficher les détails de ce dernier sur une deuxième vue.
 
 Mon objectif initial était de développer une application permettant de construire ses propres set d'items, je continuerai donc à travailler sur ce projet dans ce sens.
 
@@ -59,7 +59,7 @@ Mon objectif initial était de développer une application permettant de constru
   
 ## Auteurs
 
-* **Valentin Camozzi** _alias_ [@VCamozzi](https://github.com/VCamozzi)
+* **Valentin Camozzi** [@VCamozzi](https://github.com/VCamozzi)
 
 ## License
 
