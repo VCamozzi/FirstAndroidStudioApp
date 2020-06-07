@@ -19,6 +19,7 @@ Mon objectif initial était de développer une application permettant de constru
 - GitFlow
 - SOLID
 - Utilisation de Thread
+- des efforts sur le design
 
 ## Pour commencer
 
