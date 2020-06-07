@@ -31,7 +31,7 @@ Mon objectif initial était de développer une application permettant de constru
 
 ### Logo personnalisé
 
-![screen](https://raw.githubusercontent.com/VCamozzi/FirstAndroidStudioApp/master/img/logo-2.png | width=540)
+![screen](https://raw.githubusercontent.com/VCamozzi/FirstAndroidStudioApp/master/img/logo-2.png)
 
 ### Affichage de la liste
 
