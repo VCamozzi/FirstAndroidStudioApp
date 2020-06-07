@@ -35,13 +35,13 @@ Mon objectif initial était de développer une application permettant de constru
 
 ### Affichage de la liste
 
-![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-1.png | width=540)
-![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-2.png | width=540)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-1.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-2.png)
 
 ### Détails d'un Item
 
-![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-1.png | width=540)
-![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-2.png | width=540)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-1.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-2.png)
 
 ## Fabriqué avec
 
