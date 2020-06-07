@@ -31,17 +31,17 @@ Mon objectif initial était de développer une application permettant de constru
 
 ### Logo personnalisé
 
-![alt text](https://raw.githubusercontent.com/VCamozzi/FirstAndroidStudioApp/master/img/logo-2.png)
+![screen](https://raw.githubusercontent.com/VCamozzi/FirstAndroidStudioApp/master/img/logo-2.png)
 
 ### Affichage de la liste
 
-![alt text](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-1.png)
-![alt text(]https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-2.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-1.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/liste-2.png)
 
 ### Détails d'un Item
 
-![alt text](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-1.png)
-![alt text](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-2.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-1.png)
+![screen](https://github.com/VCamozzi/FirstAndroidStudioApp/blob/master/img/details-2.png)
 
 ## Fabriqué avec
 
