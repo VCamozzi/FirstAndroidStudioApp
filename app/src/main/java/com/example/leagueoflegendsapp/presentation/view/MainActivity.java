@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.Toast;
 import com.example.leagueoflegendsapp.R;
 import com.example.leagueoflegendsapp.Singletons;
