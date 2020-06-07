@@ -1,6 +1,7 @@
 # Item Viewer Legue Of Legends
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)(http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)(http://forthebadge.com)
 
 Dans le cadre d'un projet lié au module de programmation mobile, j'ai été amené à développer une application sur android studio ayant pour principal objectif l'utilisation d'une API Rest. J'ai donc fait le choix d'utiliser l'API fournie par League of Legends afin de permettre à l'utilisateur d'afficher la liste des items du jeu sur une première vue, puis lors d'un clic sur un item, d'afficher les détails de ce dernier sur une deuxième vue.
 
